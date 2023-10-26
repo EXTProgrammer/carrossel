@@ -1,0 +1,118 @@
+@charset "utf-8";
+@font-face{
+    font-family: HIROMISAKE;
+    src: url(HIROMISAKE.ttf);
+}
+
+@font-face{
+    font-family: CELTG;
+    src: url(CELTG___.TTF);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 120vh;
+    width: 100vw;
+    background: rgb(32,45,157);
+    background: linear-gradient(90deg, rgba(32,45,157,1) 0%, rgba(165,125,238,1) 50%, rgba(82,15,153,1) 100%);
+   
+    
+}
+
+.container{
+    border: gold solid;
+    filter: drop-shadow(15px 15px 3px crimson);
+    height: 600px;
+    width: 500px;
+    overflow: hidden;
+    position: absolute; /*Torna possível alterar a posição do container */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*alterar a posição do eixo*/
+}
+
+h1{
+    font-size: 3em;
+    font-family: HIROMISAKE;
+    text-align: center;
+    color: gold;
+    text-shadow: 7px 7px 4px red;
+}
+
+.navegacao{
+    position: absolute; /*posição em relação ao container*/
+    bottom: 20px; /*distância a partir da base*/
+    left: 50%; /*distância a partir da esquerda*/
+    transform: translate(-50%); /*alterar o eixo principal*/
+    display: flex; /*colocar o conteúdo lado a lado*/
+}
+
+.bar{
+    background-color: #f7010180; /*plano de fundo do indicador*/
+    width: 30px; /*largura do indicador*/
+    height: 5px; /*altura do indicador*/
+    margin: 6px; /*espaço entre os indicadores*/
+    transition: .3s; /*transição no hover*/
+    cursor: pointer; /*ponteiro do mouse*/
+}
+
+input{
+    display: none; /*ocultar as inputs do tipo Radio*/
+}
+
+.imagens{
+    display: flex; /*posiciona uma imagem ao lado da outra*/
+    width: 600%; /*define o tamanho da div imagens*/
+    height: 100%; /*define a altura da div imagens*/
+}
+
+.imagem{
+    width: 16.6666666667%; /*define a proporção do tamanho de cada imagem em relação ao elemento pai*/
+    transition: .5s; /*efeito na transição das imagens*/
+}
+
+.imagem img{
+    width: 100%; /*ajusta o tamanho da imagem dentro do container*/
+    height: 100%; /*ajusta o tamanho da imagem dentro do container*/
+}
+
+#imagem1:checked ~ .img1{
+    margin-left: 0; /*alteração na margem esquerda*/
+}
+
+#imagem2:checked ~ .img1{
+    margin-left: -16.6666666667%;
+}
+
+#imagem3:checked ~ .img1{
+    margin-left: -33.3333333333%;
+}
+
+#imagem4:checked ~ .img1{
+    margin-left: -50%;
+}
+
+#imagem5:checked ~ .img1 {
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1 {
+    margin-left: -83.3333333333%;
+}
+
+/* #imagem7:checked ~.img1{
+    margin-left: -99.999999999%;
+} */
+
+footer h3{
+    font-family: CELTG;
+    color: white;
+}
+
+footer{
+    position: absolute;
+    top: 120vh;
+    left: 50%;
+    transform: translate(-50%);
+}
